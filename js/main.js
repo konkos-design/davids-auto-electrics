@@ -96,7 +96,7 @@
       if (header) header.classList.remove("is-hidden");
     });
     document.querySelectorAll(".mmenu a").forEach(function (a) {
-      a.addEventListener("click", function () { document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded", "false"); });
+      a.addEventListener("click", function () { document.body.classList.remove("menu-open"); burger.setAttribute("aria-expanded", "false"); var mm=document.querySelector(".mmenu"); if(mm)mm.setAttribute("aria-hidden","true"); });
     });
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && document.body.classList.contains("menu-open")) burger.click();
